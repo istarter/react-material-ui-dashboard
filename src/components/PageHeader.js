@@ -15,6 +15,9 @@ const useStyles = makeStyles((theme) => ({
     padding: theme.spacing(2),
     color: "#3c44b1",
   },
+  pageTitle: {
+    paddingLeft: theme.spacing(4),
+  },
 }));
 
 export default function PageHeader(props) {
