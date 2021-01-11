@@ -1,5 +1,5 @@
 import React from "react";
-import { Card, makeStyles, Paper, Typography } from "@material-ui/core";
+import { Paper, Card, Typography, makeStyles, Button } from "@material-ui/core";
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -17,23 +17,25 @@ const useStyles = makeStyles((theme) => ({
   },
   pageTitle: {
     paddingLeft: theme.spacing(4),
+    "& .MuiTypography-subtitle2": {
+      opacity: "0.6",
+    },
   },
 }));
 
 export default function PageHeader(props) {
   const classes = useStyles();
-  const { title, subtitle, icon } = props;
-
+  const { title, subTitle, icon } = props;
   return (
     <Paper elevation={0} square className={classes.root}>
       <div className={classes.pageHeader}>
         <Card className={classes.pageIcon}>{icon}</Card>
-        <div>
+        <div className={classes.pageTitle}>
           <Typography variant="h6" component="div">
             {title}
           </Typography>
           <Typography variant="subtitle2" component="div">
-            {subtitle}
+            {subTitle}
           </Typography>
         </div>
       </div>
