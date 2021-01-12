@@ -1,7 +1,7 @@
 import React from "react";
 import { TextField, makeStyles } from "@material-ui/core";
 
-export function Input(props) {
+export default function Input(props) {
   const { name, label, value, onChange } = props;
   return (
     <TextField
