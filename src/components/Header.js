@@ -2,12 +2,12 @@ import React from "react";
 import {
   AppBar,
   Toolbar,
-  Typography,
   Grid,
+  InputBase,
   IconButton,
   Badge,
-  InputBase,
   makeStyles,
+  Typography,
 } from "@material-ui/core";
 import NotificationsNoneIcon from "@material-ui/icons/NotificationsNone";
 import ChatBubbleOutlineIcon from "@material-ui/icons/ChatBubbleOutline";
@@ -33,6 +33,7 @@ const useStyles = makeStyles((theme) => ({
 
 export default function Header() {
   const classes = useStyles();
+
   return (
     <AppBar position="static" className={classes.root}>
       <Toolbar>
