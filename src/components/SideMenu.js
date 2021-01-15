@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import { makeStyles, withStyles, Typography, Grid } from "@material-ui/core";
 import { IMAGES, COLORS } from "../constant/Constant";
 
@@ -19,10 +20,17 @@ const style = {
   },
   menu: {
     height: "3em",
+    "&:hover": {
+      backgroundColor: "#fff",
+      color: "black",
+    },
   },
   menuItems: {
     color: COLORS.primary,
     fontWeight: "bold",
+    "&:hover": {
+      color: "black",
+    },
   },
 };
 
@@ -50,7 +58,11 @@ const SideMenu = (props) => {
             item
             className={classes.menu}
           >
-            <Typography className={classes.menuItems}>{route.name}</Typography>
+            <Grid item component={Link} to={route.link}>
+              <Typography className={classes.menuItems}>
+                {route.name}
+              </Typography>
+            </Grid>
           </Grid>
         ))}
       </Grid>

@@ -10,8 +10,9 @@ import {
 } from "@material-ui/core";
 import Header from "../components/Header";
 import PageHeader from "../components/PageHeader";
-
+import { BrowserRouter, Switch, Route } from "react-router-dom";
 import Employees from "../pages/Employees/Employees";
+import MainRoute from "../routes/MainRoute";
 
 const theme = createMuiTheme({
   palette: {
@@ -52,14 +53,17 @@ function App() {
   const classes = useStyles();
 
   return (
-    <ThemeProvider theme={theme}>
-      <SideMenu />
-      <div className={classes.appMain}>
-        <Header />
-        <Employees />
-      </div>
-      <CssBaseline />
-    </ThemeProvider>
+    <BrowserRouter>
+      <ThemeProvider theme={theme}>
+        <SideMenu />
+        <div className={classes.appMain}>
+          <Header />
+          {/* <Employees /> */}
+          <MainRoute />
+        </div>
+        <CssBaseline />
+      </ThemeProvider>
+    </BrowserRouter>
   );
 }
 
