@@ -6,11 +6,9 @@ import DishManager from "../pages/DishManager";
 
 export default function MainRoute() {
   return (
-    <BrowserRouter>
-      <Switch>
-        <Route exact path="/" component={Dashboard} />
-        <Route exact path="/dishmanager" component={DishManager} />
-      </Switch>
-    </BrowserRouter>
+    <Switch>
+      <Route exact path="/" component={Dashboard} />
+      <Route exact path="/dishmanager" component={DishManager} />
+    </Switch>
   );
 }

@@ -43,6 +43,7 @@ const routes = [
 
 const SideMenu = (props) => {
   const { classes } = props;
+
   return (
     <div className={classes.sideMenu}>
       <Grid container direction="column">
@@ -58,7 +59,7 @@ const SideMenu = (props) => {
             item
             className={classes.menu}
           >
-            <Grid item component={Link} to={route.link}>
+            <Grid item component={Link} to={route.link} style={{}}>
               <Typography className={classes.menuItems}>
                 {route.name}
               </Typography>
