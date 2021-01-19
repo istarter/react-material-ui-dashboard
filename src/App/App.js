@@ -44,8 +44,8 @@ const theme = createMuiTheme({
 
 const useStyles = makeStyles({
   appMain: {
-    paddingLeft: "320px",
-    width: "100%",
+    marginLeft: "16.7%",
+    maxWidth: "83.3%",
   },
 });
 

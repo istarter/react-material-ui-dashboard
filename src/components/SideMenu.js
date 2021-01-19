@@ -11,7 +11,7 @@ const style = {
     flexDirection: "column",
     position: "absolute",
     left: "0px",
-    width: "320px",
+    width: "16.7%",
     height: "100%",
     backgroundColor: "#253053",
   },

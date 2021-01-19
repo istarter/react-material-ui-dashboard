@@ -17,6 +17,8 @@ import SearchIcon from "@material-ui/icons/Search";
 const useStyles = makeStyles((theme) => ({
   root: {
     backgroundColor: "#fff",
+    // marginLeft: "16.7%",
+    // maxWidth: "83.3%",
   },
   searchInput: {
     opacity: "0.6",
